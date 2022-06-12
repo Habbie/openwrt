@@ -202,3 +202,12 @@ define Device/sercomm_h500-s-vfes
   SERCOMM_VERSION := 1001
 endef
 TARGET_DEVICES += sercomm_h500-s-vfes
+
+define Device/zyxel_vmg8324-b10a
+  $(Device/bcm63xx-nand)
+  DEVICE_VENDOR := ZyXEL
+  DEVICE_MODEL := VMG8324-B10A
+  DEVICE_LOADADDR := $(KERNEL_LOADADDR)
+endef
+
+TARGET_DEVICES += zyxel_vmg8324-b10a

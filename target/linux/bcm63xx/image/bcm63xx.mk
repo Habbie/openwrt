@@ -1240,3 +1240,4 @@ define Device/zyxel_p870hw-51a-v2
   DEFAULT := n
 endef
 TARGET_DEVICES += zyxel_p870hw-51a-v2
+
