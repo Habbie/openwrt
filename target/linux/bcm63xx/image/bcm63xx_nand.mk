@@ -211,6 +211,8 @@ define Device/zyxel_vmg8324-b10a
   CHIP_ID := 63168
   SOC := bcm63168
   BLOCKSIZE := 128k
+  CFE_RAM_FILE := zyxel,vmg8324-b10a/cferam.000
+  CFE_RAM_JFFS2_NAME := cferam.000
 endef
 
 TARGET_DEVICES += zyxel_vmg8324-b10a
