@@ -204,15 +204,20 @@ endef
 TARGET_DEVICES += sercomm_h500-s-vfes
 
 define Device/zyxel_vmg8324-b10a
-  $(Device/bcm63xx-nand)
+  $(Device/bcm63xx-cfe)
   DEVICE_VENDOR := ZyXEL
   DEVICE_MODEL := VMG8324-B10A
-  DEVICE_LOADADDR := $(KERNEL_LOADADDR)
-  CHIP_ID := 63168
-  SOC := bcm63168
-  BLOCKSIZE := 128k
-  CFE_RAM_FILE := zyxel,vmg8324-b10a/cferam.000
-  CFE_RAM_JFFS2_NAME := cferam.000
+  CHIP_ID := 63268
+  CFE_BOARD_ID := 963168VX 
+#   SOC := bcm63168
+  FLASH_MB := 16
+#   BLOCKSIZE := 128k
+#   IMAGES := cfe.bin # sysupgrade.bin
+#   IMAGE/cfe.bin := cfe-bin -n 0x20000
+#   IMAGE/sysupgrade.bin := cfe-bin
+
+#   CFE_RAM_FILE := zyxel,vmg8324-b10a/cferam.000
+#   CFE_RAM_JFFS2_NAME := cferam.000
 endef
 
 TARGET_DEVICES += zyxel_vmg8324-b10a

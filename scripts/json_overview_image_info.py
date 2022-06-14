@@ -27,7 +27,6 @@ def get_initial_output(image_info):
             return profiles
     return image_info
 
-
 for json_file in work_dir.glob("*.json"):
     image_info = json.loads(json_file.read_text())
 
